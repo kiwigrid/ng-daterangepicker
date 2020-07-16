@@ -54,7 +54,7 @@ export class AppComponent {
   ngOnInit() {
     this.options = {
       theme: 'default',
-      range: 'tm',
+      range: 'TM',
       dayNames: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       presetNames: [
         'Today',
