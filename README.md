@@ -95,7 +95,7 @@ export class AppComponent {
 ```ts
 export interface NgxDateRangePickerOptions {
   theme: 'default' | 'green' | 'teal' | 'cyan' | 'grape' | 'red' | 'gray';
-  range: 'tm' | 'lm' | 'lw' | 'tw' | 'ty' | 'ly';
+  range: 'TD' | 'TM' | 'LM' | 'LW' | 'TW' | 'TY' | 'LY' | 'L7D';
   dayNames: string[];
   presetNames: string[];
   dateFormat: string;
