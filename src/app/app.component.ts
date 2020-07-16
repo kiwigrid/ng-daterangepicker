@@ -21,6 +21,7 @@ export class AppComponent {
     range: TimeRangeEnum.LAST_SEVEN_DAYS,
     dayNames: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     presetNames: [
+      'Today',
       'This Week',
       'Last 7 Days',
       'Last Week',

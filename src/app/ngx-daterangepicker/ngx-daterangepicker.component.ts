@@ -37,8 +37,17 @@ import {
   subYears,
 } from 'date-fns';
 
-export type TimeRangeEnum = 'TM' | 'LM' | 'LW' | 'TW' | 'TY' | 'LY' | 'L7D';
+export type TimeRangeEnum =
+  | 'TD'
+  | 'TM'
+  | 'LM'
+  | 'LW'
+  | 'TW'
+  | 'TY'
+  | 'LY'
+  | 'L7D';
 export const TimeRangeEnum = {
+  TODAY: 'TD' as TimeRangeEnum,
   THIS_WEEK: 'TW' as TimeRangeEnum,
   LAST_SEVEN_DAYS: 'L7D' as TimeRangeEnum,
   LAST_WEEK: 'LW' as TimeRangeEnum,
@@ -105,6 +114,7 @@ export class NgxDateRangePickerComponent
     range: TimeRangeEnum.THIS_MONTH,
     dayNames: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
     presetNames: [
+      'Today',
       'This Week',
       'Last 7 Days',
       'Last Week',
@@ -121,7 +131,8 @@ export class NgxDateRangePickerComponent
     startOfWeek: 0,
     position: 'left',
   };
-  availableRanges: string[] = [
+  availableRanges: TimeRangeEnum[] = [
+    TimeRangeEnum.TODAY,
     TimeRangeEnum.THIS_WEEK,
     TimeRangeEnum.LAST_SEVEN_DAYS,
     TimeRangeEnum.LAST_WEEK,
@@ -330,6 +341,10 @@ export class NgxDateRangePickerComponent
       case TimeRangeEnum.LAST_SEVEN_DAYS:
         this.dateFrom = subDays(today, 7);
         this.dateTo = today;
+        break;
+      case TimeRangeEnum.TODAY:
+        this.dateFrom = startOfDay(today);
+        this.dateTo = endOfDay(today);
         break;
     }
 

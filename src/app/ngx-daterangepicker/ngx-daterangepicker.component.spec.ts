@@ -74,6 +74,7 @@ describe('UserSearchComponent', () => {
         range: TimeRangeEnum.THIS_MONTH,
         dayNames: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
         presetNames: [
+          'Today',
           'This Week',
           'Last 7 Days',
           'Last Week',
@@ -104,6 +105,7 @@ describe('UserSearchComponent', () => {
         range: 'LM',
         dayNames: ['M', 'Tu', 'W', 'Th', 'F', 'Sa', 'Su'],
         presetNames: [
+          'TD',
           'TW',
           'L7D',
           'LW',

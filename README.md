@@ -54,16 +54,17 @@ export class AppComponent {
   ngOnInit() {
     this.options = {
       theme: 'default',
-      range: 'tm',
+      range: 'TM',
       dayNames: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
       presetNames: [
+        'Today',
+        'This Week',
+        'Last 7 Days',
+        'Last Week',
         'This Month',
         'Last Month',
-        'This Week',
-        'Last Week',
         'This Year',
         'Last Year',
-        'Last 7 Days',
         'Start',
         'End',
         'Apply',
@@ -94,7 +95,7 @@ export class AppComponent {
 ```ts
 export interface NgxDateRangePickerOptions {
   theme: 'default' | 'green' | 'teal' | 'cyan' | 'grape' | 'red' | 'gray';
-  range: 'tm' | 'lm' | 'lw' | 'tw' | 'ty' | 'ly';
+  range: 'TD' | 'TM' | 'LM' | 'LW' | 'TW' | 'TY' | 'LY' | 'L7D';
   dayNames: string[];
   presetNames: string[];
   dateFormat: string;

@@ -11,7 +11,7 @@
   }"
 >
   <div class="input-section" (click)="toggleCalendar($event, 'from')">
-    <span class="label-txt">{{ options.presetNames[7] }}</span>
+    <span class="label-txt">{{ options.presetNames[8] }}</span>
     <span class="value-txt">{{ dateFrom | date: options.dateFormat }}</span>
     <span class="cal-icon">
       <svg width="94px" height="94px" viewBox="3 3 94 94" version="1.1">
@@ -35,7 +35,7 @@
   </div>
 
   <div class="input-section" (click)="toggleCalendar($event, 'to')">
-    <span class="label-txt">{{ options.presetNames[8] }}</span>
+    <span class="label-txt">{{ options.presetNames[9] }}</span>
     <span class="value-txt">{{ dateTo | date: options.dateFormat }}</span>
     <span class="cal-icon">
       <svg width="94px" height="94px" viewBox="3 3 94 94" version="1.1">
@@ -150,7 +150,7 @@
           class="action-button"
           (click)="closeCalendar()"
         >
-          {{ options.presetNames[10] }}
+          {{ options.presetNames[11] }}
         </button>
         <button
           id="apply"
@@ -158,7 +158,7 @@
           class="action-button is-active"
           (click)="updateValue()"
         >
-          {{ options.presetNames[9] }}
+          {{ options.presetNames[10] }}
         </button>
       </div>
     </div>
